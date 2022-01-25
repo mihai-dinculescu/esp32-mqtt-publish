@@ -381,6 +381,7 @@ dependencies = [
  "serde",
  "serde_json",
  "strum",
+ "strum_macros",
  "url",
 ]
 
@@ -417,6 +418,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6216d2c19a6fb5f29d1ada1dc7bc4367a8cbf0fa4af5cf12e07b5bbdde6b5b2c"
 dependencies = [
  "enumset_derive",
+ "serde",
 ]
 
 [[package]]
@@ -494,6 +496,7 @@ name = "esp32_mqtt_publish"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "embedded-svc",
  "embuild",
  "esp-idf-svc",
  "esp-idf-sys",
@@ -770,6 +773,9 @@ name = "no-std-net"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1bcece43b12349917e096cddfa66107277f123e6c96a5aea78711dc601a47152"
+dependencies = [
+ "serde",
+]
 
 [[package]]
 name = "nom"

@@ -16,6 +16,7 @@ anyhow = { version = "1.0", features = ["backtrace"] }
 log = "0.4"
 
 # ESP32 crates
+embedded-svc = "0.16"
 esp-idf-svc = "0.36"
 esp-idf-sys = { version = "0.30", features = ["binstart", "native"] } # `native` uses ESP-IDF instead of PlatformIO
 
