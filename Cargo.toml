@@ -1,0 +1,24 @@
+[package]
+name = "esp32_mqtt_publish"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = "s" # Optimize for size
+
+[profile.dev]
+debug = true # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
+
+[dependencies]
+# rust crates
+anyhow = { version = "1.0", features = ["backtrace"] }
+log = "0.4"
+
+# ESP32 crates
+esp-idf-svc = "0.36"
+esp-idf-sys = { version = "0.30", features = ["binstart", "native"] } # `native` uses ESP-IDF instead of PlatformIO
+
+[build-dependencies]
+anyhow = "1.0"
+embuild = "0.28"
