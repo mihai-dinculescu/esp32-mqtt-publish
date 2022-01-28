@@ -144,6 +144,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a4a45a46ab1f2412e53d3a0ade76ffad2025804294569aae387231a0cd6e0899"
 
 [[package]]
+name = "byteorder"
+version = "1.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "14c189c53d098945499cdfa7ecc63567cf3886b3332b312a5b4585d8d3a6a610"
+
+[[package]]
 name = "cargo_toml"
 version = "0.9.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -496,11 +502,14 @@ name = "esp32_mqtt_publish"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "embedded-hal 0.2.6",
  "embedded-svc",
  "embuild",
+ "esp-idf-hal",
  "esp-idf-svc",
  "esp-idf-sys",
  "log",
+ "mqtt-protocol",
 ]
 
 [[package]]
@@ -751,6 +760,19 @@ checksum = "a92518e98c078586bc6c934028adcca4c92a53d6a958196de835170a01d84e4b"
 dependencies = [
  "adler",
  "autocfg",
+]
+
+[[package]]
+name = "mqtt-protocol"
+version = "0.11.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "61fc413163352d530adf360d4114fb54bc98c8e80b6625e3bbb3cdde23269395"
+dependencies = [
+ "byteorder",
+ "lazy_static",
+ "log",
+ "regex",
+ "thiserror",
 ]
 
 [[package]]
